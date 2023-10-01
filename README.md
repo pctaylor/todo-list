@@ -2,14 +2,15 @@
 https://www.theodinproject.com/lessons/node-path-javascript-todo-list
 
 ## Notes
-- [ ] Use webpack to organize
-    - [ ] install date-fns via npm for date/time manipulation
-- [ ] Each to-do should be an object, with properties of
-    - [ ] title
-    - [ ] description
-    - [ ] dueDate
-    - [ ] priority
-    - [ ] status (completed)
+- [x] Use webpack to organize
+    - [x] install date-fns via npm for date/time manipulation
+- [x] Each to-do should be an object, with properties of
+    - [x] title
+    - [x] description
+    - [x] dueDate
+    - [x] priority
+    - [x] status (completed)
+    - [ ] validate property inputs
 - [ ] To-dos should be organized under projects
     - [ ] There should be a default project for to-dos w/o a project assigned
 - [ ] Keep application logic and DOM manipulation in separate modules
