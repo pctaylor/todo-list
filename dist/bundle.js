@@ -406,7 +406,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todo */ \"./src/todo.js\");\n\n\n\nconst test = new _todo__WEBPACK_IMPORTED_MODULE_0__.Todo('test')\nconsole.log(test);\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todo */ \"./src/todo.js\");\n/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project */ \"./src/project.js\");\n\n\n\n\nconst testTodo1 = new _todo__WEBPACK_IMPORTED_MODULE_0__.Todo('test todo #1', 'this is a test todo');\nconst testTodo2 = new _todo__WEBPACK_IMPORTED_MODULE_0__.Todo('test todo #2', 'this is a test todo');\nconsole.log(testTodo1);\nconsole.log(testTodo2);\n\nconst  testProject = new _project__WEBPACK_IMPORTED_MODULE_1__.Project('test project', 'this is a test project');\ntestProject.addAttribute(testTodo1);\ntestProject.addAttribute(testTodo2);\nconsole.log(testProject);\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/project.js":
+/*!************************!*\
+  !*** ./src/project.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Project: () => (/* binding */ Project)\n/* harmony export */ });\n/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! date-fns */ \"./node_modules/date-fns/esm/startOfDay/index.js\");\n\n\nclass Project {\n    constructor(name, description = '') {\n        this.name = name;\n        this.description = description;\n    }\n\n    addAttribute(attribute, attributeType) {\n\n        //check whether this attribute type has been created before\n        // if it has, add the attribute to an array for that type\n        // if it hasn't create an array for that type\n        if (this.attributeType === null) {\n            this.attributeType = attributeType;\n            \n        }\n\n\n        this.attribute = attribute;\n        this.attributeType = attributeType;\n        this.creationDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(new Date());\n    }\n}\n\n//# sourceURL=webpack://todo-list/./src/project.js?");
 
 /***/ }),
 
