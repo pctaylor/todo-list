@@ -4,10 +4,7 @@ import { Project } from './project';
 
 const testTodo1 = new Todo('test todo #1', 'this is a test todo');
 const testTodo2 = new Todo('test todo #2', 'this is a test todo');
-console.log(testTodo1);
-console.log(testTodo2);
-
 const  testProject = new Project('test project', 'this is a test project');
-testProject.addAttribute(testTodo1);
-testProject.addAttribute(testTodo2);
-console.log(testProject);
+testProject.addItem("todo", testTodo1);
+testProject.addItem("todo", testTodo2);
+console.log(testProject.items.todo.map(todo => todo.title))

@@ -4,21 +4,18 @@ export class Project {
     constructor(name, description = '') {
         this.name = name;
         this.description = description;
+        this.creationDate = startOfDay(new Date());
+        this.items = {};
     }
 
-    addAttribute(attribute, attributeType) {
-
-        //check whether this attribute type has been created before
-        // if it has, add the attribute to an array for that type
-        // if it hasn't create an array for that type
-        if (this.attributeType === null) {
-            this.attributeType = attributeType;
-            
+    // Add items to the project
+    addItem(type, item) {
+        //check whether this item type has been added before. If it has, add it to
+        // the list. Otherwise, create a new type array for it.
+        if (this.items.hasOwnProperty(type)) {
+            this.items[type].push(item);
+        } else {
+            this.items[type] = [item];
         }
-
-
-        this.attribute = attribute;
-        this.attributeType = attributeType;
-        this.creationDate = startOfDay(new Date());
     }
 }
