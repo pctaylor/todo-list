@@ -11,7 +11,7 @@ https://www.theodinproject.com/lessons/node-path-javascript-todo-list
     - [x] priority
     - [x] status (completed)
     - [ ] validate property inputs
-- [ ] To-dos should be organized under projects
+- [x] To-dos should be organized under projects
     - [ ] There should be a default project for to-dos w/o a project assigned
 - [ ] Keep application logic and DOM manipulation in separate modules
     - [ ] Application Logic
