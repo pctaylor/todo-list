@@ -1,0 +1,27 @@
+/* GLOBAL STYLES ---------------------------------------*/
+* {
+    border: solid black 1px;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+/* SIDEBAR -------------------------------------------*/
+#projectArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* TO DO LIST -------------------------------------------*/
