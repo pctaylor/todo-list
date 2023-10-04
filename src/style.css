@@ -1,7 +1,7 @@
 /* GLOBAL STYLES ---------------------------------------*/
-* {
+/* * {
     border: solid black 1px;
-}
+} */
 
 body {
     height: 100vh;
@@ -11,17 +11,88 @@ body {
 }
 
 #content {
+    height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
 
 /* SIDEBAR -------------------------------------------*/
-#projectArea {
+#sidebar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #D9E8F6;
+    box-shadow: -20px -20px 0px rgba(0, 0, 0, 0.831);
 }
 
+#homeLogo {
+    height: 48px;
+}
+
+.projectSection {
+    padding: 8px;
+}
+
+.sidebarSection, .sidebarAction {
+    padding: 8px;
+}
+
+#addActions {
+    padding-bottom: 24px;
+}
+
+.sidebarAction {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sidebarActionPlus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+    font-weight: 800;
+    background-color: #4CAF50;
+    color: #FAFAFA;
+}
+
+.sidebarActionDesc {
+    text-align: left;
+    padding: 4px;
+    width: 140px;
+    font-size: 20px;
+    font-weight: 600;
+}
 
 /* TO DO LIST -------------------------------------------*/
+/* color for bad alerts=#E53935 */
+
+#todoContent {
+    background-color: #FAFAFA;
+}
+
+#titleBar {
+    display: flex;
+    height: 48px;
+    font-size: 36px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+#todoList {
+    display: flex;
+    justify-content: space-around;
+}
+
+.todoHeader {
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}

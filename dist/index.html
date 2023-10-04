@@ -10,23 +10,35 @@
         <!-- div for rendering from js -->
 
         <div id="sidebar">
-            <div id="homeLogo">Logo</div>
             <div id="projectArea">
-                <div id="projects">
-                    <br>All</br>
-                    <br>Uncategorized</br>
-                    <br>Projects</br>
+                <div class="sidebarSection" id="homeLogo">Logo</div>
+                <div class="sidebarSection" id="projects">
+                    <div class="projectSection" id="all">All</div>
+                    <div class="projectSection" id="uncategorized">Uncategorized</div>
+                    <div class="projectSection" id="projectList">Projects</div>
                 </div>
-                <div id="addActions">
-                    <div id="addProject">+Project</div>
-                    <div id="addTodo">+To Do</div>
+            </div>
+            <div class="sidebarSection" id="addActions">
+                <div class="sidebarAction" id="addProject">
+                    <div class="sidebarActionPlus">+</div>
+                    <div class="sidebarActionDesc">Add Project</div>
+                </div>
+                <div class="sidebarAction" id="addTodo">
+                    <div class="sidebarActionPlus">+</div>
+                    <div class="sidebarActionDesc">Add To Do</div>
                 </div>
             </div>
         </div>
 
         <div id="todoContent">
             <div id="titleBar">To Do List</div>
-            <div id="todoList"></div>
+            <div id="todoList">
+                <div class="todoHeader" id="title">Title</div>
+                <div class="todoHeader" id="description">Description</div>
+                <div class="todoHeader" id="dueDate">Due Date</div>
+                <div class="todoHeader" id="priority">Priority</div>
+                <div class="todoHeader" id="status">Status</div>
+            </div>
         </div>
 
 
