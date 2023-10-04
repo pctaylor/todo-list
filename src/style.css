@@ -15,6 +15,7 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* SIDEBAR -------------------------------------------*/
@@ -23,7 +24,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background-color: #D9E8F6;
-    box-shadow: -20px -20px 0px rgba(0, 0, 0, 0.831);
+    border-right: solid black 2px;
 }
 
 #homeLogo {
@@ -32,6 +33,10 @@ body {
 
 .projectSection {
     padding: 8px;
+}
+
+.projectSection:hover {
+    font-weight: bold;
 }
 
 .sidebarSection, .sidebarAction {
@@ -59,6 +64,7 @@ body {
     font-weight: 800;
     background-color: #4CAF50;
     color: #FAFAFA;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.475);
 }
 
 .sidebarActionDesc {
@@ -84,11 +90,16 @@ body {
     justify-content: center;
     align-items: center;
     padding: 8px;
+    background-color: #007BFF;
+    color: #FAFAFA;
+    border-bottom: black solid 2px;
 }
 
 #todoList {
     display: flex;
     justify-content: space-around;
+    padding: 16px;
+    font-size: 16px;
 }
 
 .todoHeader {
