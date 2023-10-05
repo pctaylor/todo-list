@@ -39,8 +39,24 @@ body {
     padding: 8px;
 }
 
+#projectListTitle {
+    padding: 0;
+}
+
+.project {
+    padding: 8px 8px 8px 16px;
+}
+
 .projectSection:hover {
     font-weight: bold;
+}
+
+.project:hover, #projectListTitle:hover  {
+    font-weight: bold !important;
+}
+
+.project, #projectListTitle {
+    font-weight: normal;
 }
 
 .sidebarSection, .sidebarAction {

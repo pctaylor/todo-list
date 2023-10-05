@@ -2,7 +2,7 @@ import * as dateFns from 'date-fns';
 import { Todo } from './todo';
 import { Project } from './project';
 
-export class TodoList {
+class TodoList {
 
     // All the to do list needs is a default and a list of the projects
     constructor() {
@@ -39,3 +39,4 @@ export class TodoList {
         return project ? project.items.todo : [];
     }
 }
+export const todoList = new TodoList();
