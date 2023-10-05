@@ -25,6 +25,7 @@ body {
     justify-content: space-between;
     background-color: #D9E8F6;
     border-right: solid black 2px;
+    padding-left: 8px;
 }
 
 #homeLogo img {
