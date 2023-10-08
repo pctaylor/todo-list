@@ -8,7 +8,9 @@ export function addProject() {
     const projectDiv = document.getElementById('projectList');
     const addProjectButton = document.getElementById('addProjectButton');
     
-    // if a user clicks '+', append a textbox for the user to fill out
+    // if a user clicks '+'
+    //append a textbox for the user to fill out in the project sidebar section
+    //create a new textbook with project information below title
     addProjectButton.addEventListener('click', function() {
         console.log('button clicked');
         const form = document.createElement('form');

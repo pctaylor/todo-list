@@ -3,6 +3,17 @@
     border: solid black 1px;
 } */
 
+:root {
+    --primary-bg: #FAFAFA;
+    --sidebar-color: #D9E8F6;
+    --alert-green: #4CAF50;
+    --alert-green-hover: #66D573;
+    --alert-green-active: #388e3c;
+    --alert-red: #E53935;
+    --accent-blue: #007BFF;
+}
+
+
 body {
     height: 100vh;
     width: 100vw;
@@ -107,16 +118,15 @@ body {
 }
 
 /* TO DO LIST -------------------------------------------*/
-/* color for bad alerts=#E53935 */
 
-#todoContent {
+#mainContent {
     background-color: #FAFAFA;
 }
 
 #titleBar {
     display: flex;
-    height: 48px;
-    font-size: 36px;
+    height: 36px;
+    font-size: 28px;
     font-weight: 700;
     justify-content: center;
     align-items: center;
@@ -124,6 +134,38 @@ body {
     background-color: #007BFF;
     color: #FAFAFA;
     border-bottom: black solid 2px;
+}
+
+#projectContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+#projectLabel {
+    transform: rotate(-90deg);
+    font-size: 10px;
+    font-style: italic;
+    height: 5px;
+}
+
+#projectTitle, #projectInfo {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.475);
+    height: 56px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#projectTitle {
+    width: 200px;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--sidebar-color);
+}    
+
+#projectInfo {
+    width: 500px;
+    border-radius: 0 10px 10px 0;
 }
 
 #todoList {
