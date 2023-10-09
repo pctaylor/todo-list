@@ -1,5 +1,5 @@
-import { todoList } from './todo-list-logic.js';
-import { addToDoModal } from './add-todo-modal.js';
+import { todoList } from './todo-list-logic';
+import { addToDoModal } from './add-todo-modal';
 
 // When a To Do Add is triggered, display a modal on the page to fill out the information
 // When user saves, append to project
@@ -49,12 +49,14 @@ export function addToDo() {
         });
 
         // add the form for new Todos
-        addToDoModal(modalContent);
+        if (! addToDoModal(modalContent)) {
+            todoModal.style.display = 'none';
+                todoModal.remove(); 
+        }
 
         //append the new modal to the content area and display it
         content.appendChild(todoModal);
         todoModal.style.display = 'block';
 
-        
     });
 };

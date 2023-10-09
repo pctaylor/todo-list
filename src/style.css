@@ -207,3 +207,7 @@ body {
     cursor: pointer;
     float: right;
 }
+
+#newTodoForm {
+    padding-top: 16px;
+}

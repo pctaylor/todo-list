@@ -1,3 +1,5 @@
+import { todoList } from './todo-list-logic';
+
 export function addToDoModal(parentDiv) {
 
     // Create the form element
@@ -99,5 +101,32 @@ export function addToDoModal(parentDiv) {
     form.appendChild(submitButton);
 
     // Append the form to the target parent element
-    return parentDiv.appendChild(form);
-}
+    parentDiv.appendChild(form);
+
+    // When a user 'submits' that creates a new ToDo object
+    form.addEventListener('submit', function(event) {
+
+        // Prevent the form from submitting in the traditional way
+        event.preventDefault();
+        console.log("the form has been submitted");
+
+        // take out the values from the form
+        const titleValue = newTodoTitle.value;
+        const descValue = newTodoDescription.value;
+        const dateValue = newTodoDueDate.value;
+        const priorityValue = newTodoPriority.value;
+        const statusValue = newTodoStatus.value;
+    
+        // Make a new to do for the to do list
+        todoList.addTodo(
+            undefined, 
+            titleValue, 
+            descValue, 
+            dateValue, 
+            priorityValue, 
+            statusValue);
+            
+        //return False so I know to close the modal
+        return False    
+        });
+};
