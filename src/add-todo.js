@@ -5,14 +5,9 @@ import { addToDoModal } from './add-todo-modal';
 // When user saves, append to project
 export function addToDo() {
 
-    //Get divs for button and table headings
+    //Get divs for overall content and adding todo button
     const content = document.getElementById('content');
     const addTodoButton = document.getElementById('addTodoButton');
-    const priorityHeader = document.getElementById('priority');
-    const titleHeader = document.getElementById('title');
-    const descriptionHeader = document.getElementById('description');
-    const dueDateHeader = document.getElementById('dueDate');
-    const statusHeader = document.getElementById('status');
 
     //Click event listener, modal trigger
     addTodoButton.addEventListener('click', function() {

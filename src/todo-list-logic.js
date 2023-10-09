@@ -38,5 +38,16 @@ class TodoList {
         const project = this.getProject(projectName);
         return project ? project.items.todo : [];
     }
+
+    // Get all todos, period
+    getAllTodos() {
+        let allTodos = [];
+        for (let project of this.projects) {
+            allTodos = allTodos.concat(project.items.todo);
+        }
+        return allTodos;
+    }
+    
+
 }
 export const todoList = new TodoList();
