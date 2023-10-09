@@ -51,7 +51,7 @@ export function addToDo() {
         // add the form for new Todos
         if (! addToDoModal(modalContent)) {
             todoModal.style.display = 'none';
-                todoModal.remove(); 
+            todoModal.remove(); 
         }
 
         //append the new modal to the content area and display it

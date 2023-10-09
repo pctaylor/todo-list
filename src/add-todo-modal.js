@@ -127,6 +127,6 @@ export function addToDoModal(parentDiv) {
             statusValue);
             
         //return False so I know to close the modal
-        return False    
+        return false    
         });
 };
