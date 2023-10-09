@@ -108,7 +108,6 @@ export function addToDoModal(parentDiv) {
 
         // Prevent the form from submitting in the traditional way
         event.preventDefault();
-        console.log("the form has been submitted");
 
         // take out the values from the form
         const titleValue = newTodoTitle.value;
@@ -126,7 +125,8 @@ export function addToDoModal(parentDiv) {
             priorityValue, 
             statusValue);
             
-        //return False so I know to close the modal
-        return false    
+        // Emit a custom event to signal form submission
+        const formSubmittedEvent = new Event('formSubmitted');
+        form.dispatchEvent(formSubmittedEvent);    
         });
 };

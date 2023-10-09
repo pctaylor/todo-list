@@ -49,10 +49,15 @@ export function addToDo() {
         });
 
         // add the form for new Todos
-        if (! addToDoModal(modalContent)) {
+        addToDoModal(modalContent)
+        
+        // when the form has been submitted
+        const formElement = modalContent.querySelector('form');
+        formElement.addEventListener('formSubmitted', function() {
+            console.log("the form has been submitted");
             todoModal.style.display = 'none';
-            todoModal.remove(); 
-        }
+            todoModal.remove();
+        });
 
         //append the new modal to the content area and display it
         content.appendChild(todoModal);
