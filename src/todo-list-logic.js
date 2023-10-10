@@ -1,4 +1,3 @@
-import * as dateFns from 'date-fns';
 import { Todo } from './todo';
 import { Project } from './project';
 

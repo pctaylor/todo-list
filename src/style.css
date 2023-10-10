@@ -176,9 +176,15 @@ body {
 }
 
 .todoHeader {
-    padding: 8px;
+    padding: 16px;
     font-size: 20px;
     font-weight: 600;
+}
+
+.todoCell {
+    font-weight: 400;
+    font-size: 18px;
+    padding: 8px;
 }
 
 /* NEW TO DO MODAL -----------------------------------------*/

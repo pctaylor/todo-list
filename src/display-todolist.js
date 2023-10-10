@@ -1,7 +1,8 @@
 import { todoList } from './todo-list-logic';
+import { format } from 'date-fns';
 
 
-export function displayTodoList(list) {
+export function displayTodoList(list = "all") {
     
     // Get all the divs for the to do list attributes to display
     const priority = document.getElementById('todoListPriority');
@@ -10,8 +11,16 @@ export function displayTodoList(list) {
     const dueDate = document.getElementById('todoListDueDate');
     const status = document.getElementById('todoListStatus');
 
+    // Restrict to the relevant todos to display
+    let displayTodos = todoList.getAllTodos();
+    if (list==="all") {
+        displayTodos = todoList.getAllTodos();
+    } else if (list==="uncategorized") {
+        displayTodos = todoList.getTodosFromProject('Default')
+    } 
+
     // Loop through to do list and display all relevant to dos
-    todoList.getAllTodos().forEach(function(todo) {
+    displayTodos.forEach(function(todo) {
 
         //Priority
         const priorityDiv = document.createElement('div');
@@ -34,7 +43,7 @@ export function displayTodoList(list) {
         //Due Date
         const dueDateDiv = document.createElement('div');
         dueDateDiv.className = "todoCell";
-        dueDateDiv.innerHTML = todo["dueDate"]; // Assuming dueDate is stored as a string. If it's a Date object, you might need to format it.
+        dueDateDiv.innerHTML = format(todo["dueDate"], 'MMMM d, yyyy'); // Assuming dueDate is stored as a string. If it's a Date object, you might need to format it.
         dueDate.appendChild(dueDateDiv);
 
         //Status
@@ -45,3 +54,10 @@ export function displayTodoList(list) {
 
     });
 };
+
+export function clearTodos() {
+    const divsToDelete = document.querySelectorAll('div.todoCell');
+    divsToDelete.forEach(div => {
+        div.remove();
+    });
+}
