@@ -2,7 +2,8 @@ import './style.css';
 import { todoList } from './todo-list-logic';
 import { addProject } from './add-project';
 import { addToDo } from './add-todo';
-import { displayTodoList, clearTodos } from './display-todolist'
+import { displayTodoList, clearTodos } from './display-todolist';
+import { filterProjects } from './display-filter';
 
 
 // Add ability to create projects and todos
@@ -27,16 +28,7 @@ console.log(todoList.getTodosFromProject('Default'));
 //Display
 clearTodos();
 displayTodoList();
+filterProjects();
 
-const allProjectsDiv = document.getElementById('allProjects');
-const uncategorizedProjectsDiv = document.getElementById('uncategorizedProjects');
-uncategorizedProjectsDiv.addEventListener('click', function() {
-    clearTodos();
-    displayTodoList("uncategorized");
-});
-allProjectsDiv.addEventListener('click', function() {
-    clearTodos();
-    displayTodoList();
-});
 
 
